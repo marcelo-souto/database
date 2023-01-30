@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Counter({ number }) {
+function Counter({ number, style }) {
   const [counter, setCounter] = React.useState(() => number % 100);
   
   React.useEffect(() => {
@@ -13,7 +13,7 @@ function Counter({ number }) {
     return () => clearTimeout(timeout);
   }, [counter]);
 
-  return <div>{counter}</div>;
+  return <p style={style}>{counter}</p>;
 }
 
 export default Counter;
