@@ -14,7 +14,7 @@ body, h1, h2, h3, h4, p {
 }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -25,6 +25,7 @@ body, h1, h2, h3, h4, p {
 .content {
   display: grid;
   place-items: center;
+  padding: 0 20px 0 20px;
   flex: 1;
 }
 
@@ -79,5 +80,27 @@ body, h1, h2, h3, h4, p {
   to {
     transform: initial;
     opacity: initial;
+  }
+}
+
+.DOWN {
+  animation: switchUp .3s forwards;
+}
+
+@keyframes switchUp {
+  to {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+
+.UP {
+  animation: switchDown .4s forwards;
+}
+
+@keyframes switchDown {
+  to {
+    transform: translateY(800px);
+    opacity: 0;
   }
 }

@@ -1,23 +1,46 @@
 import React from 'react';
-import DatabaseTotal from './pages/DatabaseTotal';
-import TheGreatestStatistics from './pages/TheGreatestStatistics';
 import './styles/global.css';
 import ButtonUp from './components/Form/Button/ButtonUp';
 import ButtonDown from './components/Form/Button/ButtonDown';
+import PageSwitcher from './pages/PageSwitcher';
 
 function App() {
-  const [slide, setSlide] = React.useState(1);
+  const [page, setPage] = React.useState(1);
+  const [changePage, setChangePage] = React.useState({
+    action: null,
+    animate: false,
+  });
+
+  React.useEffect(() => {
+    let timeout;
+    if (changePage.animate) {
+      timeout = setTimeout(() => {
+        setChangePage({ action: null, animate: false });
+        if (changePage.action === 'DOWN') setPage(page + 1);
+        if (changePage.action === 'UP') setPage(page - 1);
+      }, 300);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [changePage]);
 
   return (
     <div className='App'>
-      {slide > 1 && <ButtonUp onClick={() => setSlide(slide - 1)} />}
+      {page > 1 && (
+        <ButtonUp
+          onClick={() => setChangePage({ action: 'UP', animate: true })}
+        />
+      )}
 
-      <div className='content'>
-        {slide === 1 && <DatabaseTotal />}
-        {slide === 3 && <TheGreatestStatistics />}
+      <div className={`content ${changePage.animate ? changePage.action : ''}`}>
+        <PageSwitcher page={page} />
       </div>
 
-      {slide < 5 && <ButtonDown onClick={() => setSlide(slide + 1)} />}
+      {page < 5 && (
+        <ButtonDown
+          onClick={() => setChangePage({ action: 'DOWN', animate: true })}
+        />
+      )}
     </div>
   );
 }
