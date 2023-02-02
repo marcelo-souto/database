@@ -3,6 +3,7 @@ import './styles/global.css';
 import ButtonUp from './components/Form/Button/ButtonUp';
 import ButtonDown from './components/Form/Button/ButtonDown';
 import PageSwitcher from './pages/PageSwitcher';
+import Summary from './components/Summary';
 
 function App() {
   const [page, setPage] = React.useState(1);
@@ -33,6 +34,7 @@ function App() {
       )}
 
       <div className={`content ${changePage.animate ? changePage.action : ''}`}>
+        <Summary />
         <PageSwitcher page={page} />
       </div>
 
