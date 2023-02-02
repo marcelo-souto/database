@@ -36,9 +36,10 @@ export const getGreatestGamesByPlatform = (id) => {
   };
 };
 
-export const getGreatestGamesByRating = () => {
+export const getGreatestGamesByRating = (query) => {
+
   return {
-    url: API_URL + `games?_sort=meta_score&order=desc&_limit=50`,
+    url: API_URL + `games?_sort=${query}&_order=desc&_limit=50`,
     options: {
       method: 'GET',
     },
