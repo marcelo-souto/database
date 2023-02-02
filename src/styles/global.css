@@ -25,7 +25,9 @@ body, h1, h2, h3, h4, p {
 
 .content {
   display: grid;
-  place-items: center;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
   padding: 0 20px 0 20px;
   width: 100%;
   flex: 1;

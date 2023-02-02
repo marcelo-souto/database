@@ -17,7 +17,7 @@ function Legend({ data, setCompanyChart }) {
             className={styles.reference}
             style={{ background: color }}
           ></div>
-          <p className={styles.company}>{company} / {quantity}</p>
+          <p className={styles.company}>{company}</p>
         </div>
       ))}
     </div>

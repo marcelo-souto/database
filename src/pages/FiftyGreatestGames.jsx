@@ -17,9 +17,9 @@ const colors = {
 };
 
 const opts = {
-  'crítica': 'meta_score',
-  'usuário': 'user_review'
-}
+  crítica: 'meta_score',
+  usuário: 'user_review',
+};
 
 function FiftyGreatestGames() {
   const { loading, error, request } = useFetch();
@@ -30,7 +30,7 @@ function FiftyGreatestGames() {
 
   React.useEffect(() => {
     if (choose.option) {
-      setGames(null)
+      setGames(null);
       async function getData() {
         const { url, options } = getCompanies();
         let { response, json } = await request(url, options);
@@ -49,8 +49,7 @@ function FiftyGreatestGames() {
 
   React.useEffect(() => {
     if (companies && choose.option) {
-      
-      setCompanyChart(null)
+      setCompanyChart(null);
       async function getGames() {
         const { url, options } = getGreatestGamesByRating(opts[choose.option]);
         let { response, json } = await request(url, options);
@@ -84,23 +83,37 @@ function FiftyGreatestGames() {
   return (
     <>
       <div
-        className={`${styles.buttonsGroup} ${choose.show && styles.showOptions}`}
+        className={`${styles.buttonsGroup} ${
+          choose.show && styles.showOptions
+        }`}
       >
         <h2>Escolha uma opção</h2>
         <div>
           <Button
             text='crítica'
             actived={choose.option}
-            onClick={({ target }) => setChoose({ option: target.innerText, show: false })}
+            onClick={({ target }) =>
+              setChoose({ option: target.innerText, show: false })
+            }
           />
           <Button
             text='usuário'
             actived={choose.option}
-            onClick={({ target }) => setChoose({ option: target.innerText, show: false })}
+            onClick={({ target }) =>
+              setChoose({ option: target.innerText, show: false })
+            }
           />
         </div>
       </div>
-      {!choose.show && <button className={styles.changeOptions} text='mudar opções' onClick={() => setChoose({ ...choose, show: true })}>mudar opção</button>}
+      {!choose.show && (
+        <button
+          className={styles.changeOptions}
+          text='mudar opções'
+          onClick={() => setChoose({ ...choose, show: true })}
+        >
+          mudar opção
+        </button>
+      )}
       {choose.option && !games && <Loading />}
       {games && (
         <div className={`${styles.container} comeFromBottom`}>
@@ -110,10 +123,9 @@ function FiftyGreatestGames() {
               companyChart={companyChart}
               data={games}
             />
-            {companyChart && <Button
-              text='limpar'
-              onClick={() => setCompanyChart(null)}
-            />}
+            {companyChart !== null && (
+              <button className={styles.limpar} onClick={() => setCompanyChart(null)}>limpar</button>
+            )}
           </div>
           <PieChart
             setCompanyChart={setCompanyChart}
