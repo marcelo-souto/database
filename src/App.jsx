@@ -32,9 +32,8 @@ function App() {
           onClick={() => setChangePage({ action: 'UP', animate: true })}
         />
       )}
-
+      <Summary setPage={setPage} page={page} />
       <div className={`content ${changePage.animate ? changePage.action : ''}`}>
-        <Summary />
         <PageSwitcher page={page} />
       </div>
 
