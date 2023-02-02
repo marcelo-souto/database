@@ -5,7 +5,7 @@ import ButtonDown from './components/Form/Button/ButtonDown';
 import PageSwitcher from './pages/PageSwitcher';
 
 function App() {
-  const [page, setPage] = React.useState(5);
+  const [page, setPage] = React.useState(1);
   const [changePage, setChangePage] = React.useState({
     action: null,
     animate: false,
