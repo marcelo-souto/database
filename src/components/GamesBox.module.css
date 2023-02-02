@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   display: grid;
 }
@@ -109,4 +110,117 @@
 
 .quantity > span {
   font-family: 'Satoshi', sans-serif;
+=======
+.container {
+  display: grid;
+}
+
+.box {
+  padding: 32px;
+  border-radius: 24px;
+  background: #171a2e;
+  display: grid;
+  gap: 12px;
+  overflow-y: auto;
+  max-width: 100%;
+  max-height: 480px;
+}
+
+.box::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  border-radius: 8px;
+  padding-right: 40px;
+}
+
+.box::-webkit-scrollbar-thumb {
+  background-color: #343966;
+  border-radius: 8px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  width: 100%;
+  align-items: center;
+  padding: 14px;
+  background-color: #1c2038;
+  border-radius: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  color: #151515;
+  background-color: #5b5ba8;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.name {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  width: 400px;
+  max-width: 520px;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score {
+  color: #505b9e;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 14px;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.companyInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 32px;
+  background-color: #171a2e;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  align-items: center;
+}
+
+.quantity, .percent {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.percent {
+  color: #7F7DE8;
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.company {
+  color: #F5F5F5;
+  font-size: 1.25rem;
+}
+
+.quantity {
+  color: #7F7DE8;
+  font-size: 1rem;
+}
+
+.quantity > span {
+  font-family: 'Satoshi', sans-serif;
+>>>>>>> 0110a05 (pages)
 }

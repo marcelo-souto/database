@@ -1,0 +1,45 @@
+.container{
+  display: grid;
+  grid-template-columns: 390px 1100px;
+}
+
+.inputs{
+  padding: 1rem;
+  margin: auto 0;
+}  
+
+.inputs h1{
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.btns{
+  display: flex;
+  justify-content: space-between;
+}
+
+.select{
+  margin: 20px 0;
+  z-index: 99;
+}
+.search{
+  z-index: 1;
+}
+
+
+.select h1{
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.games{
+  margin-left: 2rem;
+}
+.games h1{
+  display: block;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
