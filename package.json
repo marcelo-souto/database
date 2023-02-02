@@ -13,6 +13,10 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
+=======
+    "react-select": "^5.7.0",
+>>>>>>> 0110a05 (pages)
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .title {
   font-size: 3rem;
   font-weight: 600;
@@ -41,3 +42,48 @@
     transform: scale(1.1);
   }
 }
+=======
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 380px) 1fr;
+  align-items: center;
+}
+.first {
+  justify-self: end;
+  margin-right: 100px;
+}
+
+.second {
+  margin-left: 40px;
+}
+
+.scale {
+  animation: scale 1s forwards, animate 3s alternate infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  to {
+    transform: scale(1.1);
+  }
+}
+>>>>>>> 0110a05 (pages)

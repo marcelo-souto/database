@@ -3,7 +3,10 @@ import './styles/global.css';
 import ButtonUp from './components/Form/Button/ButtonUp';
 import ButtonDown from './components/Form/Button/ButtonDown';
 import PageSwitcher from './pages/PageSwitcher';
+<<<<<<< HEAD
 import Summary from './components/Summary';
+=======
+>>>>>>> 0110a05 (pages)
 
 function App() {
   const [page, setPage] = React.useState(1);
@@ -32,7 +35,11 @@ function App() {
           onClick={() => setChangePage({ action: 'UP', animate: true })}
         />
       )}
+<<<<<<< HEAD
       <Summary setPage={setPage} page={page} />
+=======
+
+>>>>>>> 0110a05 (pages)
       <div className={`content ${changePage.animate ? changePage.action : ''}`}>
         <PageSwitcher page={page} />
       </div>

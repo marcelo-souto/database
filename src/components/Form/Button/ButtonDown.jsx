@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ReactComponent as ArrowDown } from '../../../assets/downarrow.svg';
 import styles from './ButtonNav.module.css'
@@ -11,3 +12,18 @@ function ButtonDown({ onClick }) {
 }
 
 export default ButtonDown;
+=======
+import React from 'react';
+import { ReactComponent as ArrowDown } from '../../../assets/downarrow.svg';
+import styles from './ButtonNav.module.css'
+
+function ButtonDown({ onClick }) {
+  return (
+    <button className={styles.button} onClick={onClick}>
+      <ArrowDown />
+    </button>
+  );
+}
+
+export default ButtonDown;
+>>>>>>> 0110a05 (pages)

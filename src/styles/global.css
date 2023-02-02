@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 * {
@@ -107,4 +108,115 @@ body, h1, h2, h3, h4, p {
     transform: translateY(800px);
     opacity: 0;
   }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body, h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(50% 50% at 50% 50%, #161A2D 0%, #131727 100%);
+}
+
+.content {
+  display: grid;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 0 20px;
+  width: 100%;
+  flex: 1;
+}
+
+/* Animations */
+
+.comeFromLeft {
+  transform: translateX(-60px);
+  opacity: 0;
+  animation: comeFromLeft 0.3s forwards;
+}
+
+@keyframes comeFromLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.comeFromRight {
+  transform: translateX(60px);
+  opacity: 0;
+  animation: comeFromRight 0.3s forwards;
+}
+
+@keyframes comeFromRight {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.comeFromBottom {
+  transform: translateY(60px);
+  opacity: 0;
+  animation: comeFromBottom 0.3s forwards;
+}
+
+@keyframes comeFromBottom {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.comeFromTop {
+  transform: translateY(-60px);
+  opacity: 0;
+  animation: comeFromTop 0.3s forwards;
+}
+
+@keyframes comeFromTop {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.DOWN {
+  animation: switchUp .3s forwards;
+}
+
+@keyframes switchUp {
+  to {
+    transform: translateY(-800px);
+    opacity: 0;
+  }
+}
+
+.UP {
+  animation: switchDown .4s forwards;
+}
+
+@keyframes switchDown {
+  to {
+    transform: translateY(800px);
+    opacity: 0;
+  }
+>>>>>>> 0110a05 (pages)
 }
