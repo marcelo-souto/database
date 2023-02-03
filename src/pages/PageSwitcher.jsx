@@ -1,9 +1,11 @@
-import React from 'react';
-import DatabaseTotal from './DatabaseTotal';
-import TheGreatestStatistics from './TheGreatestStatistics';
-import FiftyGreatestGames from './FiftyGreatestGames';
-import TheBestGames from './TheBestGames';
-import CompaniesStatistics from './CompaniesStatistics';
+import React from 'react'
+import Loading from '../components/helper/Loading';
+const DatabaseTotal = React.lazy(() => import('./DatabaseTotal'));
+const TheGreatestStatistics = React.lazy(() => import('./TheGreatestStatistics'));
+const FiftyGreatestGames = React.lazy(() => import('./FiftyGreatestGames'));
+const TheBestGames = React.lazy(() => import('./TheBestGames'));
+const CompaniesStatistics = React.lazy(() => import('./CompaniesStatistics'));
+
 
 function PageSwitcher({ page }) {
   const pages = {
@@ -14,7 +16,11 @@ function PageSwitcher({ page }) {
     5: <FiftyGreatestGames />,
   };
 
-  return pages[page];
+  return (
+    <React.Suspense fallback={<Loading />}>
+      {pages[page]}
+    </React.Suspense>
+  );
 }
 
 export default PageSwitcher;

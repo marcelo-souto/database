@@ -11,8 +11,11 @@ function App() {
     action: null,
     animate: false,
   });
+  const contentRef = React.useRef()
 
   React.useEffect(() => {
+    if (window.innerWidth < 1460) contentRef.current.style.zoom = 0.80
+
     let timeout;
     if (changePage.animate) {
       timeout = setTimeout(() => {
@@ -36,7 +39,7 @@ function App() {
         setPage={setPage}
         page={page}
       />
-      <div className={`content ${changePage.animate ? changePage.action : ''}`}>
+      <div ref={contentRef} className={`content ${changePage.animate ? changePage.action : ''}`}>
         <PageSwitcher page={page} />
       </div>
 
