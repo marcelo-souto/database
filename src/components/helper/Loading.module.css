@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .loading {
   width: 100px;
   height: 100px;
@@ -11,4 +12,19 @@
   from {
     transform: rotate(1turn);
   }
+=======
+.loading {
+  width: 100px;
+  height: 100px;
+  border: 16px solid#7F7DE8;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: animation linear 1s infinite;
+}
+
+@keyframes animation {
+  from {
+    transform: rotate(1turn);
+  }
+>>>>>>> 0110a05 (pages)
 }
