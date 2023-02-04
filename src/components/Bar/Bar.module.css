@@ -26,7 +26,9 @@
     font-size: 1.2rem;
     color:#F5F5F5
 }
-
+.companyTitle:hover{
+    cursor: pointer;
+}
 .wrapper{
     display:flex;
     justify-content: space-between;

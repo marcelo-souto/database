@@ -74,3 +74,15 @@ export const getGreatestGamesByCritic = ({firstChoose, secondChoose}) =>{
     
   };
 }
+
+export const getCompanyAvarege = () =>{
+
+  return {
+    url: API_URL + `company?_embed=games`,
+    options: {
+      method: 'GET',
+    },
+    
+  };
+}
+

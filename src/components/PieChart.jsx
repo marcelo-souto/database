@@ -55,3 +55,5 @@ function PieChart({ data, setCompanyChart }) {
 }
 
 export default PieChart;
+
+

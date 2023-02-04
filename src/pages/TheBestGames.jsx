@@ -13,22 +13,23 @@ const TheBestGames = () => {
     thirdChoose: "",
     fourthChoose: null,
     fifthChoose: null,
+    game: null,
   });
-  
+
   const { loading, data, error, request } = useFetch();
 
   const buscar = async () => {
+    setChoose({ ...choose, game: null });
     async function getData() {
       const { url, options } = getGreatestGamesByCritic({ ...choose });
       await request(url, options);
-      setChoose({ ...choose, thirdChoose: choose.firstChoose });
+      setChoose({ ...choose, thirdChoose: choose.firstChoose, game: true });
     }
     getData();
   };
 
   return (
     <div className={style.container}>
-    
       <div className={`${style.inputs} comeFromBottom`}>
         <h1>Escolha uma opção</h1>
 
@@ -57,9 +58,8 @@ const TheBestGames = () => {
             text="Critica"
           />
         </div>
-
-        {choose.fourthChoose && (
-          <div>
+        <div>
+          {choose.fourthChoose && (
             <div className={`${style.select} comeFromBottom`}>
               <h1>Escolha o ano</h1>
               <EyearSelect
@@ -72,26 +72,24 @@ const TheBestGames = () => {
                 }
               />
             </div>
-
-            {choose.fifthChoose && (
-              <div className={`${style.search} comeFromBottom`}>
-                <Button onClick={buscar} text="Buscar" />
-              </div>
-            )}
-          </div>
-        )}
+          )}
+          {choose.fifthChoose && (
+            <div className={`${style.search}`}>
+              <Button className={`comeFromBottom`} onClick={buscar} text="Buscar" />
+            </div>
+          )}
+        </div>
       </div>
 
-      {data && (
+      {data && choose.game && (
         <div className={`${style.games} comeFromRight`}>
           <h1>Melhores do ano</h1>
 
           <div className={style.tierlist}>
-            <GamesBox data={data} choose={choose.thirdChoose}/>
+            <GamesBox data={data} choose={choose.thirdChoose} />
           </div>
         </div>
       )}
-
     </div>
   );
 };
