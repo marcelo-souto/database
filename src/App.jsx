@@ -43,7 +43,7 @@ function App() {
         <PageSwitcher page={page} />
       </div>
 
-      {page < 5 && (
+      {page < 6 && (
         <ButtonDown
           onClick={() => setChangePage({ action: 'DOWN', animate: true })}
         />

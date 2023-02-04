@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Summary.module.css';
 
 function Summary({ page, setPage }) {
-  const pages = Array(5).fill(undefined);
+  const pages = Array(6).fill(undefined);
 
   return (
     <div className={styles.container}>

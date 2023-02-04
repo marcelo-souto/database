@@ -19,3 +19,5 @@ function PageSwitcher({ page }) {
 
   return pages[page];
 }
+
+export default PageSwitcher
