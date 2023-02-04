@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './GamesBox.module.css';
-import Counter from '../components/helper/Counter';
 
 function GamesBox({ data, companyChart, choose }) {
   let infoCompany;
