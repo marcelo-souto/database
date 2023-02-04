@@ -1,0 +1,18 @@
+.button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 14px;
+  z-index: 10;
+}
+
+.button:hover {
+  animation: animate .3s ease-in-out alternate infinite;
+}
+
+@keyframes animate {
+  to {
+    transform: translateY(-10px);
+  }
+}

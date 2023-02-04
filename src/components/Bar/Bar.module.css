@@ -1,0 +1,41 @@
+
+.Bar{
+    width: 100%;
+    height: 34px;
+    background-color:#1C1F37;
+    border-radius:  6px;
+    overflow: hidden;
+}
+
+.percentBar{
+    height: 34px;
+    background-color: #343966;
+    border-radius: 6px 0 0 6px;
+    transition: 0.1s;
+
+}
+
+.percentValue{
+    font-family: 'Satoshi',sans-serif;
+    font-size: 1.2rem;
+    color: #8566F6
+}
+
+.companyTitle{
+    
+    font-size: 1.2rem;
+    color:#F5F5F5
+}
+.companyTitle:hover{
+    cursor: pointer;
+}
+.wrapper{
+    display:flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 8px;
+}
+
+    .cont{
+        margin-bottom: 1.2rem;
+    }

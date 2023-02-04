@@ -1,0 +1,130 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 800px;
+}
+
+.wrapper {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 32px;
+  justify-items: center;
+  max-width: 616px;
+  position: relative;
+}
+
+.fplace,
+.splace,
+.tplace {
+  grid-row: 1;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  animation: scale 0.3s forwards;
+  animation-delay: 2.1s;
+}
+
+.rating {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 4px;
+
+  --max-lines: 2;
+  --line-height: 1.4;
+  max-height: calc(var(--max-lines) * 1em * var(--line-height));
+  line-height: var(--line-height);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 16ch;
+}
+
+.releaseyear {
+  font-size: 0.875rem;
+  font-family: 'Satoshi', sans-serif;
+  color: #8666f7;
+}
+
+.fplace {
+  margin-left: 36px;
+  grid-column: 1 / 2;
+  top: 110px;
+}
+
+.splace {
+  grid-column: 2 / 3;
+  top: 40px;
+}
+
+.tplace {
+  margin-right: 36px;
+  grid-column: 3 / 4;
+  top: 132px;
+}
+
+.circle {
+  width: 600px;
+  height: 600px;
+  transform: scale(0);
+  background: #131726;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  animation: scale 0.8s ease-in-out forwards;
+}
+
+.crown {
+  transform: scale(0);
+  animation: scale 0.8s ease-in-out forwards, rotate 1s alternate infinite;
+}
+
+.podium {
+  margin-top: 200px;
+  grid-row: 1;
+  grid-column: 1 / 4;
+  transform: scale(0) rotate(30deg);
+  animation: scale 0.8s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.podium rect:nth-child(1),
+.podium rect:nth-child(2),
+.podium rect:nth-child(3), .podium path {
+  transform: translateY(170px);
+  animation: showUp 1s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+
+@keyframes scale {
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: initial;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1.7);
+  }
+}
+
+@keyframes showUp {
+  to {
+    transform: translateY(0px);
+  }
+}
