@@ -1,0 +1,23 @@
+platform_id,name,company_id
+1, Nintendo 64,1
+6, Wii,1
+9, Switch,1
+12, GameCube,1
+14, Wii U,1
+15, Game Boy Advance,1
+16, 3DS,1
+18, DS,1
+2, PlayStation,2
+3, PlayStation 3,2
+10, PlayStation 2,2
+11, PlayStation 4,2
+19, PlayStation Vita,2
+20, PlayStation 5,2
+21, PSP,2
+4, Dreamcast,3
+5, Xbox 360,4
+7, Xbox One,4
+13, Xbox,4
+17, Xbox Series X,4
+22, Stadia,5
+8, PC,6
