@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Summary.module.css';
 
-function Summary({ page, setPage }) {
-  const pages = Array(6).fill(undefined);
+function Summary({ page, setPage, totalPages }) {
+  const pages = Array(totalPages).fill(undefined);
 
   return (
     <div className={styles.container}>

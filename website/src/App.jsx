@@ -11,10 +11,11 @@ function App() {
     action: null,
     animate: false,
   });
+  const totalPages = 7
   const contentRef = React.useRef()
 
   React.useEffect(() => {
-    if (window.innerWidth < 1460) contentRef.current.style.zoom = 0.80
+    if (window.innerWidth < 1600) contentRef.current.style.zoom = 0.80
 
     let timeout;
     if (changePage.animate) {
@@ -37,13 +38,14 @@ function App() {
       )}
       <Summary
         setPage={setPage}
+        totalPages={totalPages}
         page={page}
       />
       <div ref={contentRef} className={`content ${changePage.animate ? changePage.action : ''}`}>
         <PageSwitcher page={page} />
       </div>
 
-      {page < 6 && (
+      {page < totalPages && (
         <ButtonDown
           onClick={() => setChangePage({ action: 'DOWN', animate: true })}
         />

@@ -1,0 +1,84 @@
+.container {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+  justify-content: center;
+  gap: 0px;
+  animation: animate3 6s ease-in-out alternate infinite 1s;
+}
+
+.titleLeft, .titleRight {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #f5f5f5;
+}
+
+.titleLeft span, .titleRight span {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #7682c3;
+}
+
+.titleLeft {
+  left: 460px;
+  top: 200px;
+}
+
+.titleRight {
+  right: 460px;
+  top: 200px;
+}
+
+.averageContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 0px);
+  align-items: center;
+  justify-items: center;
+  transform: scale(0);
+  animation: animate 1s forwards, scale 0.3s forwards,
+    animate2 6s ease-in-out alternate infinite 1s;
+}
+
+.averageContainer > div {
+  display: grid;
+  gap: 0px;
+  animation: animate3 6s ease-in-out alternate infinite 1s;
+}
+
+@keyframes animate {
+  to {
+    grid-template-columns: repeat(3, 140px);
+  }
+}
+
+@keyframes animate2 {
+  to {
+    grid-template-columns: repeat(3, 180px);
+  }
+}
+
+@keyframes animate3 {
+  to {
+    gap: 46px;
+  }
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1);
+  }
+}

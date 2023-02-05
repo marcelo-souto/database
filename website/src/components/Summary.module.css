@@ -1,11 +1,12 @@
 .container {
   position: absolute;
   left: 0;
-  top: 45%;
+  top: 40%;
   display: grid;
   gap: 16px;
   justify-items: center;
   margin-left: 24px;
+  z-index: 99;
 }
 
 .dot {
