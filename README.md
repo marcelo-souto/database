@@ -55,6 +55,12 @@
 <p>Para visualizar as consultas ao banco e os dados criamos um website interativo para acompanhá-las.</p>
 <a target="_blank" href="https://database-website-9mg3cu99e-marcelo-souto.vercel.app/"><img src="https://user-images.githubusercontent.com/100978478/217090211-14725dbe-819c-43c0-8e83-4ea636d110f3.svg" /></a>
 <p>Para acessar o site, <a target="_blank" href="https://database-website-9mg3cu99e-marcelo-souto.vercel.app/">Clique aqui</a>.</p>
+
+## 🙋‍♂️ Equipe
+- <a href="https://github.com/marcelo-souto">@marcelo-souto</a>
+- <a href="https://github.com/Matheus-Valviesse">@Matheus-Valviesse</a>
+- <a href="https://github.com/yasmincr">@yasmincr</a>
+- <a href="https://github.com/miihhernandez">@miihhernandez</a>
                            
 ## :wrench: Tecnologias e Ferramentas
 <ul>
@@ -87,6 +93,7 @@
   </li>
 <ul>
 
+  
 
 
 
