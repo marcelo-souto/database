@@ -51,8 +51,9 @@
     </ol>
     
 ## :computer: Website de Apresentação
+
 <p>Para visualizar as consultas ao banco e os dados criamos um website interativo para acompanhá-las.</p>
-<img src="https://user-images.githubusercontent.com/100978478/217086137-5e2255b3-7dd0-4aa3-ab20-e6b5705542cb.svg" />
+<a href="https://database-website-9mg3cu99e-marcelo-souto.vercel.app/"><img src="https://user-images.githubusercontent.com/100978478/217090211-14725dbe-819c-43c0-8e83-4ea636d110f3.svg" /></a>
 <p>Para acessar o site, <a href="https://database-website-9mg3cu99e-marcelo-souto.vercel.app/">Clique aqui</a>.</p>
                            
 ## :wrench: Tecnologias e Ferramentas
